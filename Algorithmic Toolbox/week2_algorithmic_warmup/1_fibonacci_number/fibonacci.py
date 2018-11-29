@@ -2,8 +2,13 @@
 def calc_fib(n):
     if (n <= 1):
         return n
+    else:
+    	a, b = 0, 1
+    	for x in range(1, n):
+    		res = a + b
+    		a, b = b, res
+    	return res
 
-    return calc_fib(n - 1) + calc_fib(n - 2)
 
 n = int(input())
 print(calc_fib(n))
